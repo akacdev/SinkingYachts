@@ -8,6 +8,9 @@
   A C# library for detecting Discord/Steam phishing links using the Sinking Yachts API. 
 </div>
 
+## Usage
+Everything is located within the `SinkingYachts` NuGet package, the main class is called `YachtsClient`.
+
 ## Features
 - Fully async
 - Access to a Discord-related phishing database of over `13 300` confirmed malicious domains
