@@ -41,6 +41,9 @@ Under the `Example` folder you can find a demo Discord bot that implements this 
 18.06. 20:09:40 [Gateway] Ready
 ```
   
+## Unknown domains
+Found a Discord/Steam phishing domain that isn't yet present in the database? Send it into the `#domain-reports` channel on our Discord server or open an **issue**. 
+  
 ## Links
 Need help, want to discuss phishing or have a suggestion? Feel free to join our Discord server: https://discord.gg/cT6eQjWW8H 
 
