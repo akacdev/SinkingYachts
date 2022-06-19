@@ -32,6 +32,17 @@ Everything is located within the `SinkingYachts` NuGet package, the main class i
 - EventHandler\<string> `DomainAdded`
 - EventHandler\<string> `DomainDeleted`  
 
+## Statistics from the past week
+| Date | New domains found |
+| :---: | :---: |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+| 0.0.0 | + `0` |
+
 ## Example
 Under the `Example` folder you can find a demo Discord bot that implements this library.
 ```rust
