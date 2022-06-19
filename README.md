@@ -43,7 +43,7 @@ Everything is located within the `SinkingYachts` NuGet package, the main class i
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
 
-# Recently flagged domains
+## Recently flagged domains
 ```ruby
 guide-events.com
 steamcanmmunity.ru
