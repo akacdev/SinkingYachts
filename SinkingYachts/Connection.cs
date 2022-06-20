@@ -4,6 +4,7 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace SinkingYachts
 {
@@ -77,7 +78,10 @@ namespace SinkingYachts
 
         public void OnMessage(string msg)
         {
-            Change data = JsonSerializer.Deserialize<Change>(msg);
+            JsonSerializerOptions opt = new();
+            opt.Converters.Add(new JsonStringEnumConverter());
+
+            Change data = JsonSerializer.Deserialize<Change>(msg, opt);
 
             foreach (string domain in data.Domains)
             {
