@@ -9,7 +9,9 @@
 </div>
 
 ## Usage
-Everything is located within the `SinkingYachts` NuGet package, the main class is called `YachtsClient`.
+This library can be downloaded as the package `SinkingYachts`. The main class is called `YachtsClient`.
+
+https://www.nuget.org/packages/SinkingYachts
 
 ## Features
 - Fully async
