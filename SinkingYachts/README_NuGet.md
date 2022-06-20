@@ -1,6 +1,6 @@
 # Sinking Yachts 🐟
 
-![](./icon.png)
+![](https://raw.githubusercontent.com/actually-akac/SinkingYachts/master/SinkingYachts/icon.png)
 
 A C# library for detecting Discord/Steam phishing links using the Sinking Yachts API. 
 
@@ -70,7 +70,7 @@ Found a Discord/Steam phishing domain that isn't yet present in the database? Se
 ## Links
 Need help, want to discuss phishing or have a suggestion? Feel free to join our Discord server: https://discord.gg/cT6eQjWW8H 
 
-Official website: https://sinking.yachts<br>
-Email: sinkingyachts@gmail.com<br>
-GitHub: https://github.com/SinkingYachts<br>
-Blog: https://sinking.yachts/blog/<br>
+* Official website: https://sinking.yachts
+* Email: sinkingyachts@gmail.com
+* GitHub: https://github.com/SinkingYachts
+* Blog: https://sinking.yachts/blog/

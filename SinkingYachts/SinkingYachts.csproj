@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <PackageId>SinkingYachts</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>akac</Authors>
     <Company>akac</Company>
     <Product>SinkingYachts</Product>
@@ -15,8 +15,8 @@
     <RepositoryUrl>https://github.com/actually-akac/SinkingYachts</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>phishing; phish; scam; anti-phishing; anti-scam; discord; steam; sinking-yachts</PackageTags>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
