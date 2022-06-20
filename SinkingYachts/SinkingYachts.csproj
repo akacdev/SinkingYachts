@@ -11,7 +11,7 @@
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/actually-akac/SinkingYachts</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>README_NuGet.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/actually-akac/SinkingYachts</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>phishing; phish; scam; anti-phishing; anti-scam; discord; steam; sinking-yachts</PackageTags>
@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\README.md">
+    <None Include="README_NuGet.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
