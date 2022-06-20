@@ -1,12 +1,8 @@
 # Sinking Yachts 🐟
 
-<div align="center">
-  <img width="256" height="256" src="https://cdn.discordapp.com/icons/908947284853682266/a928bf7a58ed5fccbdbadefd0aee34ff.png?size=256">
-</div>
+![](./icon.png)
 
-<div align="center">
-  A C# library for detecting Discord/Steam phishing links using the Sinking Yachts API. 
-</div>
+A C# library for detecting Discord/Steam phishing links using the Sinking Yachts API. 
 
 ## Usage
 Everything is located within the `SinkingYachts` NuGet package, the main class is called `YachtsClient`.
