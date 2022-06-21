@@ -45,14 +45,14 @@ namespace Example
 
             if (Mode == StorageMode.LocalWS)
             {
-                Yachts.DomainAdded += (o, domain) =>
+                Yachts.DomainAdded += async (sender, domain) =>
                 {
-                    Console.WriteLine($"New domain added: {domain}");
+                    await Logger.Log("Bot", $"New domain added: {domain}", LogSeverity.Info);
                 };
 
-                Yachts.DomainDeleted += (o, domain) =>
+                Yachts.DomainDeleted += async (sender, domain) =>
                 {
-                    Console.WriteLine($"New domain deleted: {domain}");
+                    await Logger.Log("Bot", $"New domain deleted: {domain}", LogSeverity.Info);
                 };
             }
 

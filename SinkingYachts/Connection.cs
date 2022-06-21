@@ -34,7 +34,7 @@ namespace SinkingYachts
         {
             Connected = false;
             WS = new ClientWebSocket();
-            WS.Options.SetRequestHeader("X-Identity", $"https://github.com/actually-akac/SinkingYachts | {_identity}");
+            WS.Options.SetRequestHeader("X-Identity", _identity);
 
             try
             {
@@ -78,10 +78,21 @@ namespace SinkingYachts
 
         public void OnMessage(string msg)
         {
-            JsonSerializerOptions opt = new();
-            opt.Converters.Add(new JsonStringEnumConverter());
+            Change data;
 
-            Change data = JsonSerializer.Deserialize<Change>(msg, opt);
+            try
+            {
+                JsonSerializerOptions opt = new();
+                opt.Converters.Add(new JsonStringEnumConverter());
+
+                data = JsonSerializer.Deserialize<Change>(msg, opt);
+            }
+            catch (Exception ex)
+            {
+                throw new($"Failed to deserialize database change: {ex.GetType().Name} => {ex.Message}\nMessage: {msg}");
+            }
+
+            if (data.Domains is null) throw new($"Domains in the update event are null.\nMessage: {msg}");
 
             foreach (string domain in data.Domains)
             {

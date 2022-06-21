@@ -152,11 +152,11 @@ namespace SinkingYachts
 
                         Con = new Connection(_identity);
 
-                        Con.DomainAdded += (o, domain) => Cache[domain] = true;
-                        Con.DomainAdded += (o, domain) => DomainAdded(o, domain);
+                        Con.DomainAdded += (sender, domain) => Cache[domain] = true;
+                        Con.DomainAdded += (sender, domain) => DomainAdded(sender, domain);
 
-                        Con.DomainDeleted += (o, domain) => Cache[domain] = false;
-                        Con.DomainDeleted += (o, domain) => DomainDeleted(o, domain);
+                        Con.DomainDeleted += (sender, domain) => Cache[domain] = false;
+                        Con.DomainDeleted += (sender, domain) => DomainDeleted(sender, domain);
 
                         break;
                     }
@@ -277,10 +277,17 @@ namespace SinkingYachts
 
             if (!res.IsSuccessStatusCode) throw new($"Unexpected response while fetching recent changes: {res.StatusCode}, {content}");
 
-            JsonSerializerOptions opt = new();
-            opt.Converters.Add(new JsonStringEnumConverter());
+            try
+            {
+                JsonSerializerOptions opt = new();
+                opt.Converters.Add(new JsonStringEnumConverter());
 
-            return JsonSerializer.Deserialize<Change[]>(content, opt);
+                return JsonSerializer.Deserialize<Change[]>(content, opt);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to deserialize database changes: {ex.GetType().Name} => {ex.Message}\nJSON: {content}");
+            }
         }
 
         /// <summary>
