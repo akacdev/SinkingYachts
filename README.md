@@ -42,22 +42,22 @@ https://www.nuget.org/packages/SinkingYachts
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
-| 0.0.0 | + `0` |
 | 23.06.2022 | + `33` |
+| 24.06.2022 | + `24` |
 
 ## Recently flagged domains
 ```ruby
-gamepassnitro.us
-hypesquad-invite.gq
-discordsnitro.live
-hype-events-vote.gq
-steamcommunityzc.top
-steamcommunityzv.top
-rust-roulettes.com
-dlscordz.com
-steamcommunulty.ru.com
-steamcommunuitly.ru.com
-steamcommunitsy.gq
+steamcommunityzivc.top
+www-robloxa.com
+wwzw-robloxs.com
+www-roblox.com.ru
+discoradnitro.xyz
+hype-squad-vote.gq
+www.discordpolicy.repl.co
+wmw-roblox.com
+hype-events-badges.gq
+wwu-roblox.com
+discrod-egift.com
 ```
 
 ## Example
