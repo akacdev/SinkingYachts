@@ -40,24 +40,24 @@ https://www.nuget.org/packages/SinkingYachts
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
-| 0.0.0 | + `0` |
 | 23.06.2022 | + `33` |
 | 24.06.2022 | + `24` |
 | 25.06.2022 | + `59` |
+| 26.06.2022 | + `33` |
 
 ## Recently flagged domains
 ```ruby
-join-hypesquadevents-register.gq
-hype-squad-form.gq
-steancummlunity.com
-stemcomminnly.com
-steancummiunyty.com
-stemcomunily.com
-steancummiunuty.com
-takedrop.gq
-sreancomnunlty.ru
-sreamcomnunllty.ru
-somabox.ru
+epicgamesnitro.xyz
+dlscordc.com
+forms-join-hypesquad.gq
+official-registration-hypesquad.com
+signup-forms-hypesquad.com
+joins-forms-hypesquad.com
+acess-hypesquad-2022.com
+invite-hypesquad.ml
+forms-hypesquad-apply.gq
+register-hypesquad.ga
+rblxcopy.com
 ```
 
 ## Example
