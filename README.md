@@ -39,25 +39,25 @@ https://www.nuget.org/packages/SinkingYachts
 | :---: | :---: |
 | 0.0.0 | + `0` |
 | 0.0.0 | + `0` |
-| 0.0.0 | + `0` |
 | 23.06.2022 | + `33` |
 | 24.06.2022 | + `24` |
 | 25.06.2022 | + `59` |
 | 26.06.2022 | + `33` |
+| 27.06.2022 | + `26` |
 
 ## Recently flagged domains
 ```ruby
-epicgamesnitro.xyz
-dlscordc.com
-forms-join-hypesquad.gq
-official-registration-hypesquad.com
-signup-forms-hypesquad.com
-joins-forms-hypesquad.com
-acess-hypesquad-2022.com
-invite-hypesquad.ml
-forms-hypesquad-apply.gq
-register-hypesquad.ga
-rblxcopy.com
+picsartnitro.us
+discorgs.icu
+dlscorg.icu
+steamcommunityui.club
+steamcommunityii.club
+captchas.gg
+bot-dyno.gg
+discrod-free-gift.com
+stamcommunity.ru
+navisteam.org.ru
+dlscordznitro.icu
 ```
 
 ## Example
