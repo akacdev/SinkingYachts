@@ -38,26 +38,26 @@ https://www.nuget.org/packages/SinkingYachts
 | Date | New domains found |
 | :---: | :---: |
 | 0.0.0 | + `0` |
-| 0.0.0 | + `0` |
 | 23.06.2022 | + `33` |
 | 24.06.2022 | + `24` |
 | 25.06.2022 | + `59` |
 | 26.06.2022 | + `33` |
 | 27.06.2022 | + `26` |
+| 28.06.2022 | + `29` |
 
 ## Recently flagged domains
 ```ruby
-picsartnitro.us
-discorgs.icu
-dlscorg.icu
-steamcommunityui.club
-steamcommunityii.club
-captchas.gg
-bot-dyno.gg
-discrod-free-gift.com
-stamcommunity.ru
-navisteam.org.ru
-dlscordznitro.icu
+discrod-free-giftes.com
+discoldis.icu
+steamcommyunity.us
+steamcommunimty.ml
+discord-talk.ru
+dlscqrdgift.xyz
+apply-hypesquad-academy.gq
+dlscordis.icu
+register-hypesquad-event.cf
+hypesquad-picked.gq
+hsevents-badge.gq
 ```
 
 ## Example
