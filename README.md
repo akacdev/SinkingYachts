@@ -76,7 +76,7 @@ Under the `Example` folder you can find a demo Discord bot that implements this 
 Found a Discord/Steam phishing domain that isn't yet present in the database? Send it into the `#domain-reports` channel on our Discord server or open an **issue**. 
   
 ## Links
-Need help, want to discuss phishing or have a suggestion? Feel free to join our Discord server: https://discord.gg/cT6eQjWW8H 
+Need help, want to discuss phishing or have a suggestion? Feel free to join our Discord server: https://discord.gg/d63pvY28HU
 
 Official website: https://sinking.yachts<br>
 Email: sinkingyachts@gmail.com<br>
