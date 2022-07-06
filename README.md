@@ -37,27 +37,27 @@ https://www.nuget.org/packages/SinkingYachts
 ## Statistics from the past week
 | Date | New domains found |
 | :---: | :---: |
-| 28.06.2022 | + `29` |
 | 29.06.2022 | + `46` |
 | 30.06.2022 | + `84` |
 | 01.07.2022 | + `21` |
 | 02.07.2022 | + `43` |
 | 03.07.2022 | + `31` |
 | 04.07.2022 | + `46` |
+| 05.07.2022 | + `33` |
 
 ## Recently flagged domains
 ```ruby
-applyed-hypesquad.gq
-apply-hypeteam.ga
-hypesquad-2022.ga
-hypesquad-club-events.ga
-join-hype-event.gq
-egift-premium.ru
-dscordpromotions.xyz
-discord-academys.tk
-keepmybit.com
-steam-airdrop.com
-apply-hypesquad-events.ga
+hype-invites.gq
+join-thehypesquad.ml
+applyed-hypesquads.gq
+beta-discord.co
+egift-premium.shop
+beta-discordapp.ml
+steamcomnmunlty.ru
+staemcommqnity.ru
+moderator-academy-enter.gq
+contact-forms-hype-moderator.com
+steaecommunity.com
 ```
 
 ## Example
