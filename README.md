@@ -37,27 +37,27 @@ https://www.nuget.org/packages/SinkingYachts
 ## Statistics from the past week
 | Date | New domains found |
 | :---: | :---: |
-| 12.07.2022 | + `17` |
 | 13.07.2022 | + `10` |
 | 14.07.2022 | + `8` |
 | 15.07.2022 | + `29` |
 | 16.07.2022 | + `9` |
 | 17.07.2022 | + `53` |
 | 18.07.2022 | + `21` |
+| 19.07.2022 | + `31` |
 
 ## Recently flagged domains
 ```ruby
-discord-nltro.site
-discord-hype-temporaly.com
-club-apply-squad.ml
-hypesquad-join-form.gq
-discordsteamnitro.com
-discrodnitro.com
-steancommumtny.com
-discords-gift-free-nitro.ru
-free-nitro-8.ru
-dlcsord-app.com
-new-event-hype.gq
+dlcsord-gg.com
+mee6.ink
+steamcommunitywi.top
+stearncommunitys.com
+sleamcomunity.website
+sleamcomnuniity.com.ru
+steamcumnunity.ml
+sleamcomminutvy.com
+rust-roullete.com
+ukfreecouponcode.com
+discor-d-nitro.online
 ```
 
 ## Example
