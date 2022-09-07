@@ -8,42 +8,69 @@ using System.Text.Json.Serialization;
 
 namespace SinkingYachts
 {
+    /// <summary>
+    /// The class for connecting and receiving messages from the real-time WebSocket server.
+    /// </summary>
     public class Connection
     {
-        public const string URL = "wss://phish.sinking.yachts/feed";
-        public const int ReconnectionInterval = 10000;
+        /// <summary>
+        /// The WebSocket URI to connect to.
+        /// </summary>
+        public static readonly Uri Feed = new("wss://phish.sinking.yachts/feed");
+
+        /// <summary>
+        /// How long to wait before reconnecting after a connection is lost.
+        /// </summary>
+        public const int ReconnectionDelay = 10000;
 
         private ClientWebSocket WS;
         private readonly CancellationTokenSource Source = new();
 
+        /// <summary>
+        /// Whether there is currently a connection to the phishing feed.
+        /// </summary>
         public bool Connected = false;
 
+        /// <summary>
+        /// Executes whenever a phishing domain is added into the database.
+        /// </summary>
         public EventHandler<string> DomainAdded;
+
+        /// <summary>
+        /// Executes whenever a phishing domain is removed from the database.
+        /// </summary>
         public EventHandler<string> DomainDeleted;
 
-        private readonly string _identity;
+        private readonly string Identity;
 
+        /// <summary>
+        /// Default constructor for the connection class.
+        /// </summary>
+        /// <param name="identity"></param>
         public Connection(string identity)
         {
-            _identity = identity;
+            Identity = identity;
 
             Connect();
         }
 
+        /// <summary>
+        /// Connects to the remote WebSocket server to start receiving updates.
+        /// </summary>
         public async void Connect()
         {
             Connected = false;
             WS = new ClientWebSocket();
-            WS.Options.SetRequestHeader("X-Identity", _identity);
+            WS.Options.SetRequestHeader("X-Identity", Identity);
 
             try
             {
-                await WS.ConnectAsync(new Uri(URL), Source.Token);
+                await WS.ConnectAsync(Feed, Source.Token);
             }
             catch
             {
                 Connected = false;
-                await Task.Delay(ReconnectionInterval);
+                await Task.Delay(ReconnectionDelay);
                 Connect();
                 return;
             }
@@ -62,8 +89,8 @@ namespace SinkingYachts
 
                         WebSocketReceiveResult result = await WS.ReceiveAsync(bytesReceived, Source.Token);
                         offset += result.Count;
-                        if (result.EndOfMessage)
-                            break;
+
+                        if (result.EndOfMessage) break;
                     }
                     catch { break; };
                 }
@@ -72,10 +99,13 @@ namespace SinkingYachts
             }
 
             Connected = false;
-            await Task.Delay(ReconnectionInterval);
+            await Task.Delay(ReconnectionDelay);
             Connect();
         }
 
+        /// <summary>
+        /// Called when a WebSocket message is received.
+        /// </summary>
         public void OnMessage(string msg)
         {
             Change data;

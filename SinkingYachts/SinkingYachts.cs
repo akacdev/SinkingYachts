@@ -39,9 +39,15 @@ namespace SinkingYachts
     /// </summary>
     public enum ChangeType
     {
+        /// <summary>
+        /// Domain add event.
+        /// </summary>
         [JsonPropertyName("add")]
         Add,
 
+        /// <summary>
+        /// Domain delete event.
+        /// </summary>
         [JsonPropertyName("delete")]
         Delete
     }
@@ -106,11 +112,18 @@ namespace SinkingYachts
 
         private static Connection Con;
 
-        private readonly string _identity;
-        private readonly TimeSpan _cachePeriod;
-        private readonly StorageMode _mode;
+        private readonly string Identity;
+        private readonly TimeSpan CachePeriod;
+        private readonly StorageMode Mode;
 
+        /// <summary>
+        /// Executes whenever a phishing domain is added into the database.
+        /// </summary>
         public EventHandler<string> DomainAdded;
+
+        /// <summary>
+        /// Executes whenever a phishing domain is deleted from the database.
+        /// </summary>
         public EventHandler<string> DomainDeleted;
 
         /// <summary>
@@ -119,23 +132,25 @@ namespace SinkingYachts
         /// <param name="mode">The domain storage mode to use.</param>
         /// <param name="identity">A short string identifying your bot application. By default this is the name of your project.</param>
         /// <param name="cachePeriodHours">How long in hours should be API responses cached for.</param>
-        public YachtsClient(StorageMode mode, int cachePeriodHours = 3, string identity = null)
+        public YachtsClient(StorageMode mode, string identity = null, int cachePeriodHours = 3)
         {
-            _mode = mode;
-            _identity = $"https://github.com/actually-akac/SinkingYachts | {identity ?? Assembly.GetEntryAssembly().GetName().Name}";
-            _cachePeriod = TimeSpan.FromHours(cachePeriodHours);
+            Mode = mode;
+            Identity = $"https://github.com/actually-akac/SinkingYachts | {identity ?? Assembly.GetEntryAssembly().GetName().Name}";
+            CachePeriod = TimeSpan.FromHours(cachePeriodHours);
 
             Client = new();
-            Client.DefaultRequestHeaders.Add("X-Identity", _identity);
+            Client.DefaultRequestHeaders.Add("X-Identity", Identity);
 
-            switch (_mode)
+            switch (Mode)
             {
                 case StorageMode.Local:
                     {
                         UpdateCache();
 
-                        Refresher = new();
-                        Refresher.Interval = RefreshInterval;
+                        Refresher = new()
+                        {
+                            Interval = RefreshInterval
+                        };
                         Refresher.Elapsed += (o, e) => UpdateCache();
                         Refresher.Start();
 
@@ -145,12 +160,14 @@ namespace SinkingYachts
                     {
                         UpdateCache();
 
-                        Refresher = new();
-                        Refresher.Interval = RefreshInterval;
+                        Refresher = new()
+                        {
+                            Interval = RefreshInterval
+                        };
                         Refresher.Elapsed += (o, e) => UpdateCache();
                         Refresher.Start();
 
-                        Con = new Connection(_identity);
+                        Con = new Connection(Identity);
 
                         Con.DomainAdded += (sender, domain) => Cache[domain] = true;
                         Con.DomainAdded += (sender, domain) => DomainAdded(sender, domain);
@@ -224,7 +241,7 @@ namespace SinkingYachts
             output = bool.Parse(content);
             Cache[domain] = output;
 
-            Task remover = Task.Delay(_cachePeriod).ContinueWith(x =>
+            Task remover = Task.Delay(CachePeriod).ContinueWith(x =>
             {
                 Cache.Remove(domain);
             });
@@ -249,7 +266,7 @@ namespace SinkingYachts
         /// <summary>
         /// Fetches the total amount of flagged domains in the database.
         /// </summary>
-        public async Task<int> DatabaseSize()
+        public async Task<int> GetDatabaseSize()
         {
             HttpResponseMessage res = await Client.GetAsync($"{Api}/v{Version}/dbsize");
             string content = await res.Content.ReadAsStringAsync();
@@ -267,7 +284,7 @@ namespace SinkingYachts
         /// <summary>
         /// Fetches the domains added or deleted within the last X seconds.
         /// </summary>
-        public async Task<Change[]> Recent(int seconds)
+        public async Task<Change[]> GetRecent(int seconds)
         {
             if (seconds > 604800) throw new ArgumentException("Maximum value is 604800 seconds (7 days).", nameof(seconds));
             if (seconds <= 0) throw new ArgumentException("Argument has to be positive.", nameof(seconds));
@@ -293,9 +310,9 @@ namespace SinkingYachts
         /// <summary>
         /// Fetches the domains added or deleted within the provided TimeSpan.
         /// </summary>
-        public async Task<Change[]> Recent(TimeSpan time)
+        public async Task<Change[]> GetRecent(TimeSpan time)
         {
-            return await Recent((int)time.TotalSeconds);
+            return await GetRecent((int)time.TotalSeconds);
         }
     }
 }

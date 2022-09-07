@@ -16,7 +16,7 @@ namespace Example
 
         public static readonly StorageMode Mode = StorageMode.LocalWS;
 
-        private static readonly YachtsClient Yachts = new(Mode, 3, "Example Bot");
+        private static readonly YachtsClient Yachts = new(Mode, "Example Bot", 3);
 
         private static readonly string Token = Environment.GetEnvironmentVariable("BOT_TOKEN");
 
@@ -61,9 +61,9 @@ namespace Example
 
         public static async Task Ready()
         {
-            await Logger.Log("Bot", $"Bot is ready to protect your server from {await Yachts.DatabaseSize()} phishing domains", LogSeverity.Info);
+            await Logger.Log("Bot", $"Ready to protect your server from {await Yachts.GetDatabaseSize()} phishing domains", LogSeverity.Info);
 
-            Change[] changes = await Yachts.Recent(TimeSpan.FromDays(1));
+            Change[] changes = await Yachts.GetRecent(TimeSpan.FromDays(1));
 
             int added = changes.Count(x => x.Type == ChangeType.Add);
             int deleted = changes.Count(x => x.Type == ChangeType.Delete);
@@ -78,11 +78,11 @@ namespace Example
             if (msg.Channel is not SocketTextChannel) return;
             if (msg.Author.IsBot) return;
 
-            if (await Yachts.IsPhishing(msg.Content))
-            {
-                await msg.DeleteAsync();
-                await msg.Channel.SendMessageAsync("Phishing links are not allowed.");
-            }
+            bool isPhishing = await Yachts.IsPhishing(msg.Content);
+            if (!isPhishing) return;
+
+            await msg.DeleteAsync();
+            await msg.Channel.SendMessageAsync($"{msg.Author.Mention}, phishing links are not allowed.");
         }
     }
 }
