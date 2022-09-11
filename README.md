@@ -76,27 +76,22 @@ int size = await Yachts.GetDatabaseSize();
 ## Statistics from the past week
 | Date | New domains found |
 | :---: | :---: |
-| 03.09.2022 | + `25` |
 | 04.09.2022 | + `3` |
 | 05.09.2022 | + `18` |
 | 06.09.2022 | + `5` |
 | 07.09.2022 | + `10` |
 | 08.09.2022 | + `21` |
 | 09.09.2022 | + `21` |
+| 10.09.2022 | + `6` |
 
 ## Recently flagged domains
 ```ruby
-shockify.blog
-www-robiox.com
-dsload.com
-disindexs.com
-dsstatistics.com
-dsstatistic.com
-discclient.com
-dstatistic.com
-disstats.com
-discstatistics.com
-distabs.com
+connected-hypesquad-events.tk
+giflztdilscowa.com
+apply-hype-squad.gq
+giflztdilscowf.com
+wwvvww-roblox.com
+djscordnltro.com
 ```
 
 ## Missing domains
