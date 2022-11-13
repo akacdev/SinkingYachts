@@ -76,27 +76,27 @@ int size = await Yachts.GetDatabaseSize();
 ## Statistics from the past week
 | Date | New domains found |
 | :---: | :---: |
-| 05.11.2022 | + `25` |
 | 06.11.2022 | + `14` |
 | 07.11.2022 | + `25` |
 | 08.11.2022 | + `18` |
 | 09.11.2022 | + `18` |
 | 10.11.2022 | + `37` |
 | 11.11.2022 | + `14` |
+| 12.11.2022 | + `25` |
 
 ## Recently flagged domains
 ```ruby
-steamcoemmunily.com
-steamcoemmunity.com
-csgo-rewards.com
-robloxapi.vip
-stencommuniti.ru
-csgofreeskins.shop
-steamcommunnitly.ru
-steamconmnuilty.com
-steamcommunntliy.ru
-steomcanmunity.ru
-steimconmunlty.ru
+sleamcammunity.ru
+steancomnmnunity.ru
+get-nltro.com
+staemcommunity.org.ru
+steamcommunnitlys.ru
+staemcornunity.ru
+steamcommunit-y.ru
+www-dyno.shop
+steamcommunnitlys.online
+steamcommuunty.com
+dscordgift.com
 ```
 
 ## Missing domains
