@@ -5,6 +5,15 @@
 A C# library for detecting Discord/Steam phishing links using the Sinking Yachts API. 
 
 
+
+> **Warning**
+
+> Sinking Yachts is currently in the process of being discontinued and replaced with the upstream [Fish Fish API](https://fishfish.gg).
+
+> Expect this library to eventually become archived and marked as deprecated.
+
+> Daily statistics have already been shut down.
+
 ## Usage
 Available on NuGet as `SinkingYachts`, methods are available under the public class `YachtsClient`.
 
@@ -76,7 +85,7 @@ Found a Discord/Steam phishing domain that isn't yet present in the database? Se
 ## Resources
 Need help, want to discuss phishing or have a suggestion? Feel free to join our Discord server: https://discord.gg/d63pvY28HU (temporarily closed)
 
-* Official website: https://sinking.yachts
-* Email: admin@fishfish.gg, sinkingyachts@gmail.com
-* GitHub: https://github.com/SinkingYachts
-* Blog: https://sinking.yachts/blog/
+- Official website: https://sinking.yachts
+- Email: admin@fishfish.gg, sinkingyachts@gmail.com
+- GitHub: https://github.com/SinkingYachts
+- Blog: https://sinking.yachts/blog/
